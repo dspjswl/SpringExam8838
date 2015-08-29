@@ -10,7 +10,7 @@
    <aop:config>
       <aop:aspect id="log" ref="logging">
          <aop:pointcut id="selectAll" 
-         expression="execution(* com.hand.SpringExam8838.FilmJDBCTemplate.*.*(..))"/>
+         expression="execution(* com.hand.SpringExam8838.FilmJDBCTemplate.insert(..))"/>
          <aop:before pointcut-ref="selectAll" method="BeforeInsertFilmEvent"/>
          <aop:after pointcut-ref="selectAll" method="AfterInsertFilmEvent"/>
          
